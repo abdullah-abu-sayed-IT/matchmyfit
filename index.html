@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MatchMyFit – সেরা ম্যাচ + সিজন + স্কিন + অকেশন</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MatchMyFit</h1>
+      <p class="tagline">ছবি আপলোড করো বা রঙ লিখো → সিজন, স্কিন টোন, অকেশন অনুযায়ী সেরা ম্যাচ</p>
+    </header>
+
+    <!-- ফিল্টার -->
+    <section class="filters">
+      <div class="filter-group">
+        <label>সিজন</label>
+        <select id="season">
+          <option value="all">সব সিজন</option>
+          <option value="summer">গ্রীষ্ম (Summer)</option>
+          <option value="winter">শীত (Winter)</option>
+          <option value="spring">বসন্ত (Spring)</option>
+          <option value="autumn">শরৎ (Autumn)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>স্কিন টোন</label>
+        <select id="skinTone">
+          <option value="all">সব</option>
+          <option value="fair">ফর্সা (Fair)</option>
+          <option value="medium">মাঝারি (Medium)</option>
+          <option value="dark">গাঢ় (Dark)</option>
+          <option value="olive">অলিভ (Olive)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>অকেশন</label>
+        <select id="occasion">
+          <option value="all">সব</option>
+          <option value="casual">ক্যাজুয়াল</option>
+          <option value="office">অফিস</option>
+          <option value="party">পার্টি</option>
+          <option value="formal">ফর্মাল</option>
+          <option value="wedding">বিয়ে</option>
+          <option value="date">ডেট</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- আপলোড -->
+    <section class="upload-section">
+      <h2>ছবি আপলোড করো (১০টা)</h2>
+      <div id="uploadGrid" class="upload-grid"></div>
+      <button id="addMore" class="btn add-more">+ আরো ছবি</button>
+    </section>
+
+    <!-- ম্যানুয়াল -->
+    <section class="manual-section">
+      <h2>বা রঙ লিখো (ছবি ছাড়াই)</h2>
+      <div class="manual-input">
+        <input type="text" id="manualColor" placeholder="যেমন: navy blue, #000080, lime green" />
+        <button id="manualAdd" class="btn">যোগ করো</button>
+      </div>
+    </section>
+
+    <!-- রেজাল্ট -->
+    <section id="results" style="display:none;">
+      <h2>রঙ বিশ্লেষণ ও সেরা ম্যাচ</h2>
+      <div id="colorList" class="color-grid"></div>
+      <div id="bestMatch" class="best-match-card"></div>
+      <div id="allPairs" class="pairs-container">
+        <h3>সব সম্ভাব্য জুটি (স্কোর সহ)</h3>
+      </div>
+      <div class="tips">
+        <strong>ট্রেন্ড টিপস (২০২৬):</strong> লাইম গ্রিন + নেভি, কোবাল্ট ব্লু + বেইজ, পপি রেড + কালো, অ্যাসিড গ্রিন + ব্রাউন। নিউট্রাল কালার সব অকেশনের জন্য সেফ।
+      </div>
+    </section>
+
+    <footer>তৈরি করেছেন: Sayed Ahmed | Habiganj, Sylhet</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
